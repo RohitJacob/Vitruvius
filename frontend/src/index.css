@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --input-bg: #f8fafc;
+}
+
+.dark {
+  --bg: #060a14;
+  --bg-secondary: #0c1222;
+  --bg-card: rgba(15, 23, 42, 0.6);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --border: rgba(148, 163, 184, 0.1);
+  --border-hover: rgba(148, 163, 184, 0.2);
+  --input-bg: #0f172a;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+@layer components {
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .dark .card {
+    backdrop-filter: blur(20px);
+  }
+  .card-hover:hover {
+    border-color: var(--border-hover);
+  }
+  .glow-brand {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.12), 0 0 60px rgba(59, 130, 246, 0.04);
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white font-medium rounded-xl hover:bg-brand-500 transition-all duration-200 active:scale-[0.98];
+  }
+  .btn-ghost {
+    color: var(--text-secondary);
+    @apply hover:bg-brand-500/5 rounded-xl transition-all duration-200;
+  }
+  .btn-ghost:hover {
+    color: var(--text-primary);
+  }
+  .btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    @apply rounded-xl transition-all duration-200;
+  }
+  .btn-outline:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
+  .input-field {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.15s;
+  }
+  .input-field::placeholder {
+    color: var(--text-muted);
+  }
+  .input-field:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+}
