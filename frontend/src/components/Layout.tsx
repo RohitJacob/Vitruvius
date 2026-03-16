@@ -12,7 +12,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       {showHeader && (
         <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: "color-mix(in srgb, var(--bg) 85%, transparent)" }}>
           <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-            <button onClick={reset} className="hover:opacity-70 transition-opacity">
+            <button onClick={reset} className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+              <img src="/logo-icon.png" alt="" className="h-6 dark:brightness-150" />
               <span style={{ fontFamily: "'Gveret Levin', cursive" }} className="text-lg">
                 Vitruvius
               </span>

@@ -59,14 +59,21 @@ export default function UploadPanel() {
       </div>
 
       {/* Hero */}
-      <div className="text-center mb-12">
-        <h1
-          style={{ fontFamily: "'Gveret Levin', cursive" }}
-          className="text-6xl sm:text-7xl text-brand-600 dark:text-brand-400 leading-tight"
-        >
-          Vitruvius
-        </h1>
-        <p className="mt-3 text-sm" style={{ color: "var(--text-secondary)" }}>
+      <div className="flex flex-col items-center mb-12">
+        <div className="flex items-center gap-4">
+          <img
+            src="/logo-icon.png"
+            alt=""
+            className="h-14 sm:h-18 dark:brightness-150"
+          />
+          <span
+            style={{ fontFamily: "'Gveret Levin', cursive" }}
+            className="text-5xl sm:text-6xl text-brand-600 dark:text-brand-400"
+          >
+            Vitruvius
+          </span>
+        </div>
+        <p className="mt-4 text-sm" style={{ color: "var(--text-secondary)" }}>
           Add site photos to get started
         </p>
       </div>
