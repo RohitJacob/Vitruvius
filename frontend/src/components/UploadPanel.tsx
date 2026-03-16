@@ -59,27 +59,21 @@ export default function UploadPanel() {
       </div>
 
       {/* Hero */}
-      <div className="flex flex-col items-center mb-12">
-        <div className="flex items-center gap-4">
-          <img
-            src="/logo-icon.png"
-            alt=""
-            className="h-14 sm:h-18 dark:brightness-150"
-          />
-          <span
-            style={{ fontFamily: "'Gveret Levin', cursive" }}
-            className="text-5xl sm:text-6xl text-brand-600 dark:text-brand-400"
-          >
-            Vitruvius
-          </span>
-        </div>
-        <p className="mt-4 text-sm" style={{ color: "var(--text-secondary)" }}>
-          Add site photos to get started
-        </p>
+      <div className="flex items-center gap-2.5 mb-6">
+        <img src="/logo-icon.png" alt="" className="h-10 dark:brightness-150" />
+        <span
+          style={{ fontFamily: "'Gveret Levin', cursive" }}
+          className="text-4xl text-brand-600 dark:text-brand-400"
+        >
+          Vitruvius
+        </span>
       </div>
+      <p className="text-sm mb-8" style={{ color: "var(--text-secondary)" }}>
+        Add site photos to get started
+      </p>
 
       {/* Content */}
-      <div className="w-full max-w-md space-y-5">
+      <div className="w-full max-w-md space-y-4">
         {/* Photo drop zone */}
         <div
           onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
